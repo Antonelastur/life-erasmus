@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Proiect Erasmus+ L.I.F.E. – Cursuri pentru cadre didactice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --albastru: #01143E;
+      --auriu: #FFB800;
+      --verde: #1FA866;
+      --gri-deschis: #f5f7fb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      color: var(--albastru);
+      background-color: white;
+    }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header img {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 2rem 0 0.75rem;
+      border-left: 4px solid var(--auriu);
+      padding-left: 0.5rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin: 1.2rem 0 0.4rem;
+    }
+    p { margin-bottom: 0.6rem; }
+    ul { margin-left: 1.2rem; margin-bottom: 0.6rem; }
+    li { margin-bottom: 0.25rem; }
+
+    .hero {
+      background: linear-gradient(135deg, #01143E 0%, #0b4a7a 40%, #1FA866 100%);
+      color: white;
+      padding: 1.5rem 1.2rem;
+      border-radius: 14px;
+      margin-bottom: 1.8rem;
+    }
+    .hero h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .hero p { margin-bottom: 0.8rem; }
+    .hero .cta-main {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      background-color: var(--auriu);
+      color: #01143E;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 0.4rem;
+    }
+
+    .info-box {
+      background-color: var(--gri-deschis);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin-top: 0.6rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+    .step {
+      background-color: white;
+      border-radius: 10px;
+      padding: 0.9rem;
+      border: 1px solid #dde3f0;
+    }
+    .step-numar {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: var(--auriu);
+      color: var(--albastru);
+      text-align: center;
+      line-height: 26px;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .eticheta-obiectiv {
+      display: inline-block;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      background-color: #e8eefc;
+      color: var(--albastru);
+    }
+
+    .grid-cursuri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+    .card-curs {
+      background-color: white;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      border: 1px solid #dde3f0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-curs h4 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .card-meta {
+      font-size: 0.85rem;
+      color: #44516b;
+      margin-bottom: 0.4rem;
+    }
+    .card-curs ul {
+      margin-left: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .butoane-card {
+      margin-top: 0.3rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      border: none;
+      text-decoration: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .btn-primar {
+      background-color: var(--albastru);
+      color: white;
+    }
+    .btn-primar:hover { opacity: 0.9; }
+    .btn-secondary {
+      background-color: #e8eefc;
+      color: var(--albastru);
+    }
+
+    .cta-final {
+      text-align: center;
+      margin-top: 2.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 1.2rem 1rem; }
+      .hero h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER CU LOGO -->
+  <header>
+    <header>
+  <img src="Completa.jpeg" alt="Logo proiect Erasmus+ L.I.F.E.">
+  <p><strong>Școala Gimnazială „Principele Carol” Gura Humorului</strong></p>
+</header>
+</p>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Proiect Erasmus+ L.I.F.E. – Cursuri pentru cadre didactice</h1>
+    <p>
+      Alege cursul de formare care se potrivește profilului tău și sprijină
+      obiectivele proiectului L.I.F.E. (Learning Intelligently For Evaluations).
+    </p>
+    <a class="cta-main" href="#cursuri">Vezi cursurile disponibile</a>
+  </section>
+
+  <!-- OBIECTIVE -->
+  <section>
+    <h2>Obiectivele proiectului</h2>
+    <div class="info-box">
+      <ul>
+        <li><strong>O1</strong> – Îmbunătățirea strategiilor didactice (predare–învățare–evaluare), reducerea absenteismului la examenele naționale și creșterea promovabilității în 3 ani.</li>
+        <li><strong>O2</strong> – Dezvoltarea aptitudinilor TIC ale cadrelor didactice și ale elevilor.</li>
+        <li><strong>O3</strong> – Identificarea corectă și compensarea problemelor socio‑emoționale ale elevilor, prin abordare interdisciplinară, pe durata unui ciclu de învățământ (4 ani).</li>
+        <li><strong>O4</strong> – Introducerea problemelor de mediu în activități interdisciplinare și aplicarea practică a noțiunilor teoretice, pentru a crește conștientizarea privind protejarea naturii.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CUM ALEG COLEGII CURSUL -->
+  <section>
+    <h2>Cum alegi cursul potrivit</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-numar">1</div>
+        <h3>Citește descrierile</h3>
+        <p>Parcurge cursurile grupate pe obiectivele O1–O4 și vezi care tematică se potrivește nevoilor tale și rolului din școală.</p>
+      </div>
+      <div class="step">
+        <div class="step-numar">2</div>
+        <h3>Stabilește 2–3 preferințe</h3>
+        <p>Alege cel puțin un curs principal și 1–2 opțiuni de rezervă, ținând cont de impactul asupra elevilor și de diseminare.</p>
+      </div>
+      <div class="step">
+        <div class="step-numar">3</div>
+        <h3>Completează formularul</h3>
+        <p>Apasă pe „Completează formularul de opțiuni” și trimite-ți preferințele până la data stabilită de echipa de proiect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSURI -->
+  <section id="cursuri">
+    <h2>Cursuri pentru O1 – Strategii didactice și evaluare</h2>
+    <p>Aceste cursuri sprijină modernizarea demersului predare–învățare–evaluare, folosirea metodelor active și a evaluării formative, cu impact asupra absenteismului și promovabilității.</p>
+
+    <div class="grid-cursuri">
+      <!-- O1: Formative Assessment -->
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O1</span>
+          <h4>Evaluare Formativă și Managementul Feedback‑ului</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Exploră tehnici de evaluare formativă și feedback constructiv.</li>
+            <li>Folosește instrumente TIC și activități bazate pe joc pentru auto‑ și inter‑evaluare.</li>
+            <li>Lucrează cu rubrici pentru a surprinde mai bine progresul elevilor.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="LINK_GOOGLE_FORM" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <!-- O1: Project Based Learning -->
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O1</span>
+          <h4>Introducere în Învățarea Bazată pe Proiecte</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Învățare bazată pe proiecte, de la planificare la implementare.</li>
+            <li>Dezvoltă munca în echipă, colaborarea și creativitatea elevilor.</li>
+            <li>Include utilizarea rubricilor pentru evaluarea proiectelor.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="LINK_GOOGLE_FORM" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <!-- O1: Innovative Teaching Methods -->
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O1</span>
+          <h4>Descoperirea Metodelor de Predare Inovatoare</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Panoramă asupra metodelor moderne: PBL, educație non‑formală, outdoor și gamificare.</li>
+            <li>Accent pe activități practice și stiluri de predare inovatoare.</li>
+            <li>Sprijină motivarea și implicarea activă a elevilor.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="LINK_GOOGLE_FORM" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- O2 -->
+    <h2>Cursuri pentru O2 – TIC, instrumente digitale și AI</h2>
+    <p>Cursurile de mai jos dezvoltă competențele digitale ale profesorilor și elevilor, prin utilizarea TIC, a aplicațiilor interactive și a inteligenței artificiale în procesul educativ.</p>
+
+    <div class="grid-cursuri">
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O2</span><span class="eticheta-obiectiv">O1</span>
+          <h4>AI – Inteligență Artificială și ChatGPT</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Integrarea instrumentelor AI în proiectarea lecțiilor și materialelor.</li>
+            <li>Folosirea ChatGPT și a altor tool‑uri pentru evaluare formativă și feedback.</li>
+            <li>Dezvoltă competențe digitale avansate pentru profesori.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="LINK_GOOGLE_FORM" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O2</span><span class="eticheta-obiectiv">O1</span>
+          <h4>TIC, Noi Tehnologii și Instrumente AI</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Utilizarea soluțiilor TIC și a instrumentelor AI pentru managementul clasei.</li>
+            <li>Evaluarea în timp real a progresului elevilor.</li>
+            <li>Crearea de conținut multimedia atractiv pentru lecții.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="LINK_GOOGLE_FORM" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O2</span>
+          <h4>Învățarea Bazată pe Joc și Gamificarea</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Principii și aplicații pentru game‑based learning și gamificare.</li>
+            <li>Transformarea unei lecții într-un „joc” educativ.</li>
+            <li>Crește motivația și participarea elevilor.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O2</span>
+          <h4>Noi Tehnologii, Aplicații și Social Media</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Familiarizare cu aplicații interactive și platforme colaborative.</li>
+            <li>Noțiuni de web‑design educațional.</li>
+            <li>Testarea instrumentelor digitale pentru învățare bazată pe joc.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O2</span><span class="eticheta-obiectiv">O1</span>
+          <h4>Predarea Limbilor în Era Digitală</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Aplicații, instrumente AI și jocuri digitale pentru predarea limbilor.</li>
+            <li>Crearea de resurse personalizate, inclusiv activități de tip CLIL.</li>
+            <li>Evaluare prin mijloace digitale și feedback rapid.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- O3 -->
+    <h2>Cursuri pentru O3 – Bunăstare emoțională, incluziune și managementul clasei</h2>
+    <p>Aceste cursuri susțin identificarea și compensarea problemelor socio‑emoționale ale elevilor, crearea unui climat pozitiv și dezvoltarea competențelor de incluziune.</p>
+
+    <div class="grid-cursuri">
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O3</span>
+          <h4>Strategii de Bunăstare și Sănătate Mintală</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Promovarea bunăstării emoționale și a sănătății mintale a elevilor.</li>
+            <li>Exersarea empatiei și a inteligenței emoționale.</li>
+            <li>Activități pentru recunoașterea și gestionarea emoțiilor.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O3</span>
+          <h4>Prevenirea Bullying‑ului și Cyberbullying‑ului</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Creșterea gradului de conștientizare privind bullying‑ul.</li>
+            <li>Construirea unui climat de clasă pozitiv și sigur.</li>
+            <li>Strategii și politici școlare pentru prevenire.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="LINK_GOOGLE_FORM" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O3</span>
+          <h4>Drama în educație: creativitate, încredere și inteligență emoțională</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple (ex. Italia, Spania)</p>
+          <ul>
+            <li>Tehnici de dramă pentru explorarea emoțiilor și a empatiei.</li>
+            <li>Activități de colaborare și încredere în grup.</li>
+            <li>Dezvoltarea abilităților sociale și a gândirii critice.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O3</span>
+          <h4>Strategii Eficiente de Management al Clasei</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Tehnici interactive pentru gestionarea grupului de elevi.</li>
+            <li>Strategii pentru prevenirea și rezolvarea conflictelor.</li>
+            <li>Construirea unui mediu de învățare pozitiv.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O3</span>
+          <h4>Abilități Soft și Inteligență Emoțională</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Dezvoltarea abilităților de echipă, leadership și comunicare.</li>
+            <li>Accent pe empatie și inteligență emoțională.</li>
+            <li>Instrumente pentru gestionarea conflictelor și a stresului.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O3</span><span class="eticheta-obiectiv">O2</span>
+          <h4>Nevoi Speciale și Educație Incluzivă</h4>
+          <p class="card-meta">Furnizor: ELA · Italia / Spania (Tenerife)</p>
+          <ul>
+            <li>Strategii pentru includerea tuturor elevilor în procesul educativ.</li>
+            <li>Crearea unei clase incluzive, bazate pe empatie.</li>
+            <li>Utilizarea instrumentelor TIC pentru sprijinirea elevilor cu nevoi speciale.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- O4 -->
+    <h2>Cursuri pentru O4 – Mediu, dezvoltare durabilă și educație în aer liber</h2>
+    <p>Cursurile de mai jos susțin integrarea educației pentru mediu și a activităților outdoor în practica școlii, pentru a crește responsabilitatea față de natură.</p>
+
+    <div class="grid-cursuri">
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O4</span><span class="eticheta-obiectiv">O1</span>
+          <h4>Competențe Verzi pentru Educație</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Integrarea Obiectivelor de Dezvoltare Durabilă în curriculum.</li>
+            <li>Planificarea de lecții „verzi” bazate pe proiecte.</li>
+            <li>Activități inspirate de educația în aer liber.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O4</span>
+          <h4>Educația în Aer Liber</h4>
+          <p class="card-meta">Furnizor: ELA · Locații multiple în Europa</p>
+          <ul>
+            <li>Integrarea activităților outdoor în educația formală.</li>
+            <li>Dezvoltarea personală și socială prin contact cu mediul natural.</li>
+            <li>Jocuri experiențiale și provocări în oraș și în natură.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+
+      <article class="card-curs">
+        <div>
+          <span class="eticheta-obiectiv">O4</span>
+          <h4>Învățare în Aer Liber și Educație de Aventură: Ediția Drumeții</h4>
+          <p class="card-meta">Furnizor: ELA · Tenerife, Bologna, Thessaloniki</p>
+          <ul>
+            <li>Experiență directă de învățare în natură, prin drumeții.</li>
+            <li>Educație de mediu, orientare și lucru în echipă.</li>
+            <li>Activități care conectează elevii cu mediul înconjurător.</li>
+          </ul>
+        </div>
+        <div class="butoane-card">
+          <a class="btn btn-secondary" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Îl aleg ca opțiune</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <p><strong>Ești hotărât(ă)?</strong></p>
+    <p>Trimite‑ți opțiunile pentru cursurile Erasmus+ din proiectul L.I.F.E. folosind formularul online.</p>
+    <a class="btn btn-primar" href="https://forms.gle/dYdHuwG4wiQ93HrK7
+" target="_blank">Completează formularul de opțiuni</a>
+  </section>
+
+</div>
+</body>
+</html>
